@@ -1,0 +1,366 @@
+﻿<Page x:ConnectionId='1' xmlns:my="using:Telerik.UI.Xaml.Controls.Grid" 
+    x:Class="FirstUwpApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FirstUwpApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      x:Name="myPage"
+    mc:Ignorable="d">
+
+    <!--<Grid x:Name="LogBookGrid" Width="550">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical">
+            <Grid x:Name="BasicInfoGrid" Grid.Row="0" Width="550">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="550"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical">
+                        <Border BorderThickness="0,0,0,1" BorderBrush="Black" Margin="0,0,10,0">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                                <TextBlock x:Uid="SettingsDetailseUserControl_DetailsInformation_TB" FontWeight="SemiBold" Text="Basic Information" FontSize="18" Margin="0,0,0,10"/>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,10,0,5">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,10,0,5">
+                                <TextBlock x:Uid="VesselNo_TB" Text="Vessel#" FontSize="16" Margin="0,0,5,0" Width="60" VerticalAlignment="Center"/>
+                                <TextBox x:Uid="TextBoxVesselNo" 
+                                    x:Name="TextBoxVesselNo"
+                                    FontSize="16" 
+                                    Width="100" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10,10,0,5">
+                                <TextBlock x:Uid="Date_DT" Text="Date" FontSize="16" Margin="0,0,5,0" Width="40" VerticalAlignment="Center"/>
+                                <DatePicker x:Uid="DatePickerCurrentDate" x:Name="DatePickerCurrentDate" Width="115"></DatePicker>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,10,0,5">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,10,0,5">
+                                <TextBlock x:Uid="PortName_TB" Text="Port Name" FontSize="16" Margin="0,0,5,0" Width="60" VerticalAlignment="Center"/>
+                                <TextBox x:Uid="TextBoxPortName" 
+                                    x:Name="TextBoxPortName"
+                                    FontSize="16" 
+                                    Width="100" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Vertical" Grid.Row="2" >
+                        <ListView x:Name="listView1">
+                            <ListView.HeaderTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="Time" TextWrapping="WrapWholeWords"/>
+                                        <TextBlock Grid.Column="1" Text="Longitude" TextWrapping="WrapWholeWords" />
+                                        <TextBlock Grid.Column="2" Text="Latitude" TextWrapping="WrapWholeWords" />
+                                        <TextBlock Grid.Column="3" Text="Comment" TextWrapping="WrapWholeWords" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.HeaderTemplate>
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="x:String">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox Width="100"></TextBox>
+                                        <TextBox Width="100"></TextBox>
+                                        <TextBox Width="100"></TextBox>
+                                        <TextBox Width="100"></TextBox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            <x:String>Item 1</x:String>
+                            <x:String>Item 2</x:String>
+                            <x:String>Item 3</x:String>
+                            <x:String>Item 4</x:String>
+                            <x:String>Item 5</x:String>
+                        </ListView>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+    </Grid>-->
+    <StackPanel x:ConnectionId='2' x:Name="mainPanel">
+        <!-- Grid using the basic grid control -->
+        <!--<StackPanel Orientation="Vertical">
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <Grid x:Name="MyTableGrid" BorderBrush="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
+                        <TextBlock Text="Time" FontSize="25" TextAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
+                        <TextBlock Text="Longitude" FontSize="25" TextAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
+                        <TextBlock Text="Latitude" FontSize="25" TextAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
+                        <TextBlock Text="Comment" FontSize="25" TextAlignment="Center"/>
+                    </Border>
+
+
+                    <Border Grid.Column="0" Grid.Row="1" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="1"  BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="1" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="1" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="0" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="0" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
+                        <TextBox BorderBrush="Gray" BorderThickness="5" Height="56" Width="196"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </StackPanel>-->
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="50">
+                <Button x:ConnectionId='7' x:Name="SaveButton" Content="Save" Width="200" Margin="5"                          />
+                <Button x:ConnectionId='8' x:Name="NewButton" Content="New" Width="200" Margin="5"                        ></Button>
+                <Button x:ConnectionId='9' x:Name="LoadButton" Content="Load" Width="200" Margin="5"                         ></Button>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- List View : Grid 1 -->
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <ListView x:ConnectionId='6' x:Name="ListView_Fruit" BorderThickness="1" BorderBrush="Black">
+                        <ListView.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid Margin="12,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="200"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50"  Grid.Column="0">
+                                        <TextBlock x:Name="ColumnName_FruitName" Text="Fruit Name"  TextAlignment="Center"/>
+                                    </Border>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50" Grid.Column="1">
+                                        <TextBlock x:Name="ColumnName_Price" Text="Price" TextAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+
+                            </DataTemplate>
+                        </ListView.HeaderTemplate>
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="200"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50"  Grid.Column="0">
+                                        <TextBox Width="300" Text="{Binding FruitName, Mode=TwoWay}"  Height="48"/>
+                                    </Border>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50" Grid.Column="1">
+                                        <TextBox Width="200" Text="{Binding Price, Mode=TwoWay}" Height="48"/>
+                                    </Border>
+                                </Grid>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
+                <!-- List View : Grid 2 -->
+                <StackPanel Orientation="Vertical">
+                    <ListView x:ConnectionId='5' x:Name="ListView_People" BorderThickness="1" BorderBrush="Black">
+                        <ListView.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid Margin="12,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="200"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50"  Grid.Column="0">
+                                        <TextBlock x:Name="ColumnName_Name" Text="Name"  TextAlignment="Center"/>
+                                    </Border>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50"  Grid.Column="1">
+                                        <TextBlock x:Name="ColumnName_Age" Text="Age"  TextAlignment="Center"/>
+                                    </Border>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50" Grid.Column="2">
+                                        <TextBlock x:Name="ColumnName_Country" Text="Country" TextAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+
+                            </DataTemplate>
+                        </ListView.HeaderTemplate>
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="200"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50"  Grid.Column="0">
+                                        <TextBox Width="300" Text="{Binding Name, Mode=TwoWay}"  Height="48"/>
+                                    </Border>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50" Grid.Column="1">
+                                        <TextBox Width="300" Text="{Binding Country, Mode=TwoWay}" Height="48"/>
+                                    </Border>
+                                    <Border BorderThickness="1" BorderBrush="Black" Height="50" Grid.Column="2">
+                                        <TextBox Width="200" Text="{Binding Age, Mode=TwoWay}" Height="48"/>
+                                    </Border>
+                                </Grid>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <!-- RadDataGrid : Grid 1 -->
+        <StackPanel Orientation="Vertical">
+            <my:RadDataGrid x:ConnectionId='4' x:Name="Rad_Fruit" x:Uid="gri1" GroupPanelPosition="Bottom" UserGroupMode="Disabled" AutoGenerateColumns="False" VerticalAlignment="Center">
+
+                <my:RadDataGrid.Columns>
+                    <my:DataGridTemplateColumn CanUserSort="True" Header="Fruit Name">
+                        <my:DataGridTemplateColumn.CellContentTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding FruitName, Mode=TwoWay}"  HorizontalAlignment="Stretch"/>
+                            </DataTemplate>
+                        </my:DataGridTemplateColumn.CellContentTemplate>
+                    </my:DataGridTemplateColumn>
+
+                    <my:DataGridTemplateColumn CanUserSort="True"  Header="Price">
+                        <my:DataGridTemplateColumn.CellContentTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBox HorizontalAlignment="Stretch" Text="{Binding Price, Mode=TwoWay}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </my:DataGridTemplateColumn.CellContentTemplate>
+                    </my:DataGridTemplateColumn>
+                </my:RadDataGrid.Columns>
+
+            </my:RadDataGrid>
+        </StackPanel>
+
+        <!-- RadDataGrid : Grid 2 -->
+        <StackPanel Orientation="Vertical">
+            <my:RadDataGrid x:ConnectionId='3' x:Name="Rad_people" x:Uid="gri1" AutoGenerateColumns="False" VerticalAlignment="Center">
+                <my:RadDataGrid.Columns>
+                    <my:DataGridTemplateColumn CanUserSort="True" Header="Name">
+                        <my:DataGridTemplateColumn.CellContentTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Name, Mode=TwoWay}"  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                            </DataTemplate>
+                        </my:DataGridTemplateColumn.CellContentTemplate>
+                    </my:DataGridTemplateColumn>
+
+                    <my:DataGridTemplateColumn CanUserSort="True"  Header="Country">
+                        <my:DataGridTemplateColumn.CellContentTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBox HorizontalAlignment="Stretch"  Text="{Binding Country, Mode=TwoWay}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </my:DataGridTemplateColumn.CellContentTemplate>
+                    </my:DataGridTemplateColumn>
+
+                    <my:DataGridTemplateColumn CanUserSort="True"  Header="Age">
+                        <my:DataGridTemplateColumn.CellContentTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBox HorizontalAlignment="Stretch"  Text="{Binding Age, Mode=TwoWay}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </my:DataGridTemplateColumn.CellContentTemplate>
+                    </my:DataGridTemplateColumn>
+                </my:RadDataGrid.Columns>
+
+            </my:RadDataGrid>
+        </StackPanel>
+    </StackPanel>
+</Page>
+
